@@ -7,15 +7,14 @@ def downscale_video():
     if not filepath:
         return
     
-    # List of target heights for different resolutions (e.g., 1080p, 720p, 480p)
-    target_heights = [1080, 720, 480]
+    # list of target widths for different resolutions (e.g., 1080p, 720p, 480p)
+    target_widths = [1920, 1280, 854]
     output_files = []
 
-    for target_height in target_heights:
+    for target_width in target_widths:
         clip = VideoFileClip(filepath)
 
-        # Calculate the target width to maintain aspect ratio
-        target_width = int(target_height * clip.aspect_ratio)
+        target_height = int(target_width / clip.aspect_ratio)
 
         resized_clip = clip.resize(newsize=(target_width, target_height)) # type: ignore
 
