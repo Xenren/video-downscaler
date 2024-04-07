@@ -22,7 +22,9 @@ class App:
         target_widths = [1920, 1280, 854]
         output_files = []
         
-        messagebox.showinfo("Downscale Commence", "Start Downscale?")
+        confirm = messagebox.askyesno("Downscale Commence", "Start Downscale?")
+        if not confirm:
+            return
         for task_no, target_width in enumerate(target_widths, start=1):
             clip = VideoFileClip(filepath)
             target_height = int(target_width / clip.aspect_ratio)
