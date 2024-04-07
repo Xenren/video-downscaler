@@ -36,7 +36,7 @@ pip install pyinstaller
 Navigate to the `./app` directory and run:
 
 ```sh
-pyinstaller --onefile --windowed downscaler.py
+pyinstaller --onefile --windowed app.py
 ```
 
 ***NOTE: The executable file will only work on the same operating system on which it was created.***
