@@ -154,8 +154,3 @@ cython_debug/
 
 # testing files
 *.mp4
-app/utils/progress_logger.py
-app/utils/__init__.py
-app/test.py
-app/setup.py
-app/loop_progress_feedback.py
